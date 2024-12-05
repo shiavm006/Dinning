@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine Restaurant Midsem</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5225b7dab1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="booking.css">
+
+  </head>
+  <body>
+    <main class="booking-container">
+
+      <picture>
+        <source 
+        srcset="images/booking/hero-bg-tablet.jpg 1x, images/booking/hero-bg-tablet@2x.jpg 2x" 
+        media="(max-width: 1200px) and (min-width: 700px)" />
+
+        <source 
+        srcset="images/booking/hero-bg-mobile.jpg 1x, images/booking/hero-bg-mobile@2x.jpg 2x" 
+        media="(max-width: 700px)"/>
+        <img alt="hero-bg" srcset="images/booking/hero-bg-desktop.jpg 1x, images/booking/hero-bg-desktop@2x.jpg 2x" src="images/homepage/hero-bg-desktop.jpg" class="booking-container__bg" />
+      </picture>
+      
+
+      <div class="booking-container__content">
+        <div class="booking-container__intro">
+          <h1 class="heading-1 mb-small">Reservations</h1>
+          <br>
+          <p class="paragraph">
+            We can't wait to host you. If you have any special requirements
+            please feel free to call on the phone number below. We'll be happy
+            to accommodate you.
+          </p>
+          <a href="#form" class="btn btn--light booking-container__intro-btn">Reserve Place</a>
+        </div>
+
+
+        <form class="form" id="form" autocomplete="on">
+          <div class="form__input-container form__input-container--lg" id="name-container">
+            <input type="text" class="form__input" id="name" placeholder="Name" aria-label="Name" required>
+          </div>
+        
+          <div class="form__input-container form__input-container--lg" id="email-container">
+            <input type="email" class="form__input" id="email" placeholder="Email" aria-label="Email" required>
+          </div>
+        
+          <div class="form__row">
+            <label class="form__label" id="date-label">Pick a date</label>
+            <div class="form__group">
+              <div class="form__input-container form__input-container--sm">
+                <input type="text" class="form__input" id="month" placeholder="MM" aria-label="Month" required>
+              </div>
+        
+              <div class="form__input-container form__input-container--sm">
+                <input type="text" class="form__input" id="day" placeholder="DD" aria-label="Day" required>
+              </div>
+        
+              <div class="form__input-container form__input-container--md">
+                <input type="text" class="form__input" id="year" placeholder="YYYY" aria-label="Year" required>
+              </div>
+            </div>
+          </div>
+        
+          <div class="form__row">
+            <label class="form__label" id="time-label">Pick a time</label>
+            <div class="form__group">
+              <div class="form__input-container form__input-container--sm">
+                <input type="text" class="form__input" id="hour" placeholder="09" aria-label="Hour" required>
+              </div>
+              <p id="display"></p>
+
+        
+              <div class="form__input-container form__input-container--sm">
+                <input type="text" class="form__input" id="minute" placeholder="00" aria-label="Minutes" required>
+              </div>
+        
+              <div class="form__select-wrapper form__input-container form__input-container--md">
+                <div class="form__select" id="period-select">
+                  <input type="hidden" class="form__select-input" id="period" aria-label="Period">
+                  <div class="form__input form__select-trigger" id="period-trigger">
+                    <span>PM</span>
+                  </div>
+                  <div class="form__options">
+                    <div class="form__option selected" data-value="AM">
+                      <span>AM</span>
+                    </div>
+                    <div class="form__option" data-value="PM">
+                      <span>PM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="form__input-container form__input-container--lg">
+            <input type="hidden" id="people" aria-label="Number of people">
+            <label for="people" class="form__input form__operator-row">
+              <span class="form__operator fas fa-minus" id="decrement"></span>
+              <span class="form__count" id="people-count"></span>
+              <span class="form__operator fas fa-plus" id="increment"></span>
+            </label>
+          </div>
+        
+          <button class="btn btn--dark form__btn" type="submit">
+            Make Reservation
+          </button>
+        </form>
+        
+        
+      </div>
+    </main>
+
+    <div class="success">
+      <div class="success__content">
+        <i class="success__close fas fa-times"></i>
+        <p class="success__text">Thank you for booking ! </p>
+      </div>
+    </div>
+
+    <div class="booking-container__bottom-bg"></div>
+
+    <div class="footer-section">
+
+      <div class="footer">
+        <div class="col1">
+          <h3>About Dine</h3>
+          <br>
+          <p>
+            Discover exquisite flavors and unforgettable dining experiences at
+            Dine. We strive to provide eceptional service and delectable dishes
+            to satisfy every palate
+          </p>
+          <br>
+          <div class="icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>123 Main Street, City, Country</p>
+          </div>
+        
+          <div class="icon">
+            <i class="fa-solid fa-phone"></i>
+            <p>(123) 456-7890</p>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+            <p>info@dine.com</p>
+          </div>
+        </div>
+
+        <form class="form1">
+          <h3>Contact us</h3>
+          <input id="name1" type="text" placeholder="Your Name" required/>
+          <input id="email1" type="email" placeholder="Your Email" required/>
+          <textarea id="message1" placeholder="Your message"></textarea required>
+          <button id="send1">Send</button>
+        </form>
+
+      </div>
+      <div class="col3">
+          <p>&copy 2024 Dine Restaurant. All rights reserved.</p>
+      </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
